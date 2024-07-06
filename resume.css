@@ -1,0 +1,37 @@
+.text{
+
+    text-align: center;
+    margin: 5px;
+    padding: 25px;
+
+}
+
+#aqButton,#weButton,.generate{
+    text-align: center;
+}
+
+
+
+
+#cv-template{
+    margin-top: 25px;
+     display: none; 
+   
+}
+
+.myimg{
+    border: 1px solid black;
+    border-radius: 55%;
+    width: 200px;
+}
+
+.background{
+    text-align: center;
+    background-color:rgb(198, 227, 239);
+    
+}
+.name{
+    text-align: center;
+    font-weight: bold;
+    
+}

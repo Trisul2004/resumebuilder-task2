@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RESUME GENERATOR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container" id="cv-form">
+      <h1 class="text">Resume Generator</h1>
+      
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <h3>personal information:</h3>
+          <form >
+            <div class="form-group">
+              <label for="namefield">your name*</label>
+              <input type="text" class="form-control" id="namefield" placeholder="TRISUL KUMAR PRADHAN" required>
+            </div>
+
+            <div class="form-group">
+              <label for="photo field"> select your photo*</label>
+              <input type="file" class="form-control" id="photofield">
+            </div>
+          </form>
+
+          <div class="form-group mt-3">
+            <label for="contactfield">phone number:</label>
+            <input type="text" class="form-control" id="contactfield" placeholder="1234567890">
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="addressfeild">address</label>
+            <textarea type="text" id="addressfield" class="form-control" rows="5"></textarea>
+          </div>
+
+          <p class="text-secondary my-3">important links</p>
+
+          <div class="form-group mt-3">
+            <label for="linkedin">linkedin id:</label>
+            <input type="text" class="form-control" id="linkedin">
+          </div>         
+          
+          <div class="form-group mt-3">
+            <label for="github">github id:</label>
+            <input type="text" class="form-control" id="github" >
+          </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+
+          <h3>proffessional information</h3>
+
+          <div class="form-group mt-3">
+            <label for="objective">objective</label>
+            <textarea type="text" class="form-control" id="objective" ></textarea>
+          </div>
+
+
+          <div class="form-group mt-3" id="we">
+            <label for="objective my-3">work experience</label>
+            <textarea class="form-control wefield" ></textarea>
+
+
+            <!-- new text area -->
+
+            <div class="container text-centre mt-3 " id="weButton" >
+
+              <button onclick="addNew()" class="btn btn-primary btn-sm weAddButton" >add</button>
+              
+              
+            </div>
+            
+          </div>
+
+          <div class="form-group mt-3" id="aq">
+            <label for="academic my-3">academic qualification</label>
+            <textarea class="form-control aqfield" ></textarea>
+  
+            <div class="container text-centre mt-3" id="aqButton">
+  
+              <button onclick="addNewAq()"   class="btn btn-primary btn-sm" >add</button>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="generate">
+
+        <button onclick="generateCV()"     class="btn btn-primary btn-lg mt-4 "> generate cv</button>
+      </div>
+      
+    </div>
+
+
+
+    <!-- template part -->
+    <div class="container" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 text-centre py-5 background">
+          <!-- first column -->
+
+          <img src="https://amaxfireandsecurity.co.uk/wp-content/uploads/2023/12/profile-pic-MD.jpg" alt="" class="img-fluid myimg" id="photoT">
+          <div class="container">
+            <p id="nameT1">TRISUL KUMAR PRADHAN</p>
+            <P id="contactT">1234567890</P>
+            <P id="addressT">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe delectus, quibusdam nam sapiente inventore consectetur ratione veniam error veritatis. Ullam nobis commodi a, exercitationem accusamus esse explicabo reiciendis illum accusantium!</P>
+
+            <hr>
+            <p><a id="linkedinT" href="link1"> linkedin </a></p>
+            <p><a  id="githubT" href="link2"> github </a></p>
+          </div>
+
+
+        </div>
+        <div class="col-md-8 py-5">
+          <!-- second column -->
+
+          <h1  id="nameT2"  class="name">TRISUL KUMAR PRADHAN </h1>
+          <hr>
+
+          <!-- objective card -->
+
+          <div class="card">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+
+              <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error suscipit enim dolorum velit repellat fugiat accusantium alias laudantium laboriosam praesentium minima, molestias sunt assumenda provident repudiandae accusamus quibusdam sequi iste tempora nemo eligendi dicta voluptas maiores illum! Laboriosam delectus nostrum dolorum qui aspernatur suscipit facere amet, impedit dicta architecto inventore!</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header background">
+              <h3>Work experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT">
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad sit, aspernatur iusto vel sequi natus animi incidunt soluta architecto. Iusto.</li>
+                <li>Necessitatibus ullam quibusdam expedita dolorem dolores natus, dolor doloremque vero exercitationem amet veniam facilis quam cum dolorum eum quisquam! Labore.</li>
+                <li>Commodi ab nihil ipsum ratione molestias praesentium nostrum enim, non est error aliquid aspernatur officiis omnis earum incidunt magni maxime!</li>
+                
+              </ul>
+
+            </div>
+          </div>
+
+
+          <div class="card">
+            <div class="card-header background">
+              <h3>Academic qualification</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT">
+                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita at placeat autem ipsum minus. Esse?</li>
+                <li>Perferendis aliquam neque nostrum quo modi, vero mollitia ea doloremque animi natus vitae quaerat qui.</li>
+                <li>Dignissimos officiis architecto aspernatur repudiandae cum ipsum odit sed, delectus porro. Consectetur qui non quo.</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="container mt-3 text-centre">
+            <button onclick="printCV()" class="btn background"> PRINT CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
